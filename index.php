@@ -7,18 +7,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/display.css">
 
 </head>
 <body>
     <header>
         <div class="header">
-            <h1>Music player</h1>
+            <h1>Suround.in</h1>
         </div>
         <div class="search">
             <form action="" method="post">
-                <input type="text" name="search">
-                <button class="btn">find</button>
+                <input class="four-px" type="text" name="search">
+                <button class="btn four-px"> <img src="asset/icon-find.svg" alt="" class="max-3"> </button>
             </form>
         </div>
         <div class="navigation">
@@ -34,9 +36,18 @@
     <section class="hero">
         <div class="left-display">
             <div class="left-header">
-                <h3>discover</h3>
-                <h3>favorite</h3>
-                <h3></h3>
+                <div class="discover menu">
+                    <img class="max-4" src="asset/icon-explore.svg" alt="">
+                    <h3>Discover </h3>
+                </div>
+                <div class="favorite menu">
+                    <img src="asset/heart.svg" alt="" class="max-4">
+                    <h3>Favorite</h3>
+                </div>
+                <div class="playlist menu">
+                    <img src="asset/icon-playlist.svg" alt="" class="max-4">
+                    <h3>Playlist</h3>
+                </div>
             </div>
         </div>
         <div class="right-display">
@@ -63,6 +74,16 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="playing-status">
+                <div class="play">
+
+                </div>
+                <div class="timeline">
+                    
+                </div>
+            </div>
+        </footer>
     </section>
     <script src="js/script.js"></script>
 </body>

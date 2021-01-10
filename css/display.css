@@ -3,14 +3,14 @@
     margin: 0;
     box-sizing: border-box;
     /* border: 1px solid; */
-    font-family: monospace;
+    font-family: 'Kurale', serif;
 }
 
 header {
     display: grid;
     grid-template-columns: 400px 500px auto;
     padding: 10px;
-    background-color: rgb(250, 236, 209);
+    border-bottom: 1px solid wheat;
 }
 
 .center {
@@ -18,6 +18,18 @@ header {
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+}
+
+.max-3 {
+    width: 16px;
+    height: 16px;
+}
+
+.max-4 {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    display: flex;
 }
 
 .search {
@@ -29,6 +41,18 @@ header {
 
 .search input {
     width: 280px;
+}
+
+.search button {
+    background-color: white;
+    border-radius: 2px;
+    border: 2px solid;
+    width: 30px;
+}
+
+.four-px {
+    padding: 4px;
+    outline: none;
 }
 
 .navigation {
@@ -53,16 +77,35 @@ header {
 
 section.hero {
     display: grid;
+    grid-template-areas: "left right" "playing playing";
     grid-template-columns: 240px auto;
 }
 
 .left-display {
     border-right: 1px solid wheat;
     height: 100%;
+    grid-area: left;
+}
+
+.left-header {
+    padding: 10px;
+}
+
+.menu {
+    margin: 8px 0;
+    border: 1px solid wheat;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.right-display {
+    grid-area: right;
 }
 
 .album-rule {
     padding: 10px;
+    margin: 0 0 10px 0;
 }
 
 .album-title {
@@ -81,4 +124,14 @@ section.hero {
     border: 1px solid;
     margin: 0 10px;
     border-radius: 4px;
+}
+
+.playing-status {
+    grid-area: playing;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    border: 1px solid wheat;
+    background-color: rgb(255, 255, 255);
+    display: flex;
 }
