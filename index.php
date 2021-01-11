@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/display.css">
 
 </head>
@@ -72,17 +72,27 @@
                         <div class="box album"></div>
                     </div>
                 </div>
+                <div class="album-rule">
+                    <div class="album-title">Discover more</div>
+                    <div class="album-wrapper">
+                        <div class="box album"></div>
+                        <div class="box album"></div>
+                        <div class="box album"></div>
+                        <div class="box album"></div>
+                        <div class="box album"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <footer>
             <div class="playing-status">
                 <div class="play">
-
-                </div>
-                <div class="timeline">
                     
-                </div>
-            </div>
+                    </div>
+                    <div class="timeline">
+                        
+                        </div>
+                    </div>
         </footer>
     </section>
     <script src="js/script.js"></script>

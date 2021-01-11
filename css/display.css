@@ -3,13 +3,40 @@
     margin: 0;
     box-sizing: border-box;
     /* border: 1px solid; */
-    font-family: 'Kurale', serif;
+    font-family: 'Chivo', sans-serif;
 }
 
+
+/* manage scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: wheat;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: whitesmoke;
+}
+
+
+/* end manage scrollbar */
+
 header {
+    position: fixed;
+    top: 0;
     display: grid;
     grid-template-columns: 400px 500px auto;
     padding: 10px;
+    width: 100%;
+    background-color: white;
     border-bottom: 1px solid wheat;
 }
 
@@ -78,7 +105,8 @@ header {
 section.hero {
     display: grid;
     grid-template-areas: "left right" "playing playing";
-    grid-template-columns: 240px auto;
+    grid-template-columns: 17% 83%;
+    margin-top: 60px;
 }
 
 .left-display {
@@ -89,6 +117,8 @@ section.hero {
 
 .left-header {
     padding: 10px;
+    position: fixed;
+    width: 17%;
 }
 
 .menu {
@@ -101,6 +131,7 @@ section.hero {
 
 .right-display {
     grid-area: right;
+    margin-bottom: 50px;
 }
 
 .album-rule {
@@ -128,10 +159,17 @@ section.hero {
 
 .playing-status {
     grid-area: playing;
-    position: fixed;
     width: 100%;
     height: 50px;
+    bottom: 10px;
     border: 1px solid wheat;
     background-color: rgb(255, 255, 255);
     display: flex;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
