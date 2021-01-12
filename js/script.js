@@ -1,0 +1,41 @@
+// toggle play
+const body = document.querySelector('body');
+let url = ['upload_music/Alessia Cara - Seventeen.mp3'];
+let newtrack = document.createElement('audio');
+newtrack.src = url[0];
+
+function minTommss(minutes) {
+    var sign = minutes < 0 ? "-" : "";
+    var min = Math.floor(Math.abs(minutes))
+    var sec = Math.floor((Math.abs(minutes) * 60) % 60);
+    return sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
+}
+
+function playMusic() {
+    body.append(newtrack);
+    newtrack.play();
+    document.querySelector('.duration').textContent = minTommss(newtrack.duration / 60);
+    let track = document.querySelector('.slider').max = Math.floor(newtrack.duration);
+    setInterval(() => {
+        let dur = minTommss(newtrack.currentTime / 60);
+        document.querySelector('.slider').value = newtrack.currentTime;
+        document.querySelector('.currentTime').textContent = dur;
+    }, 1000);
+}
+
+document.querySelector('.slider').addEventListener('change', () => {
+    newtrack.currentTime = document.querySelector('.slider').value;
+});
+
+function stopMusic() {
+    newtrack.pause();
+}
+
+
+
+const btn = document.querySelector('.status');
+const play = document.querySelector('.play');
+btn.addEventListener('click', () => {
+    play.classList.toggle('play-toggle');
+    play.classList.contains('play-toggle') ? playMusic() : stopMusic();
+});
