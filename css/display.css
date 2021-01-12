@@ -116,7 +116,7 @@ header {
 section.hero {
     display: grid;
     grid-template-areas: "left right" "playing playing";
-    grid-template-columns: 17% 83%;
+    grid-template-columns: 15% 85%;
     margin-top: 60px;
 }
 
@@ -261,8 +261,7 @@ footer {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgb(255, 255, 255);
-    border: 1px solid;
+    background: #56ab2f;
 }
 
 .option {
