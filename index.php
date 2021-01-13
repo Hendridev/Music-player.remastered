@@ -1,5 +1,7 @@
 <?php 
-
+    include('php/function.php');
+    $db = new dbase;
+    $row = $db->tampilAlbum();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,31 +59,17 @@
                 <div class="album-rule">
                     <div class="album-title">Only for u</div>
                     <div class="album-wrapper">
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                    </div>
-                </div>
-                <div class="album-rule">
-                    <div class="album-title">Discover more</div>
-                    <div class="album-wrapper">
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                    </div>
-                </div>
-                <div class="album-rule">
-                    <div class="album-title">New release</div>
-                    <div class="album-wrapper">
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                        <div class="box album"></div>
-                        <div class="box album"></div>
+                        <?php foreach($row as $r) : ?>
+                        <div class="box">
+                            <div class="album">
+                                <img src="upload/<?= $r["gambar_album"]; ?>" alt="">
+                            </div>
+                            <div class="album_desc">
+                                <h4><?= $r["nama_album"]; ?></h4>
+                                <p>-<?= $r["penyanyi"]; ?></p>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -102,7 +90,7 @@
                 </div>
                 <div class="timeline">
                         <div class="song-title">
-                            <p class="st">Dummy music -Ye Xiu</p>
+                            <p class="st">Alessia Cara -Seventeen</p>
                         </div>
                         <div class="time">
                             <p class="currentTime"></p>
