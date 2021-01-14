@@ -44,3 +44,12 @@ btn.addEventListener('click', () => {
     play.classList.toggle('play-toggle');
     play.classList.contains('play-toggle') ? playMusic() : stopMusic();
 });
+
+
+
+// genre interface
+const genre = document.querySelectorAll('.genre');
+var color = ['linear-gradient(to right, #8a2387, #e94057, #f27121)', 'linear-gradient(to right, #fdc830, #f37335)', 'linear-gradient(to right, #ed213a, #93291e)', 'linear-gradient(to right, #4e54c8, #8f94fb)', ' linear-gradient(to right, #11998e, #38ef7d)'];
+for (let i = 0; i < genre.length; i++) {
+    genre[i].style.background = color[i];
+}

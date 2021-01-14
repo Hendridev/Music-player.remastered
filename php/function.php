@@ -13,8 +13,16 @@
             }
         }
 
-        function tampilAlbum(){
-            $query = mysqli_query($this->do, "SELECT * FROM album");
+        function tampilAlbum($a,$b){
+            $query = mysqli_query($this->do, "SELECT * FROM album WHERE id_album >= $a AND id_album <= $b");
+            while($dum = mysqli_fetch_array($query)){
+                $result[] = $dum;
+            }
+            return $result;
+        }
+
+        function tampilGenre($a,$b){
+            $query = mysqli_query($this->do, "SELECT * FROM genre WHERE id_genre >= $a AND id_genre <= $b");
             while($dum = mysqli_fetch_array($query)){
                 $result[] = $dum;
             }

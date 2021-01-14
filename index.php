@@ -1,7 +1,13 @@
 <?php 
     include('php/function.php');
     $db = new dbase;
-    $row = $db->tampilAlbum();
+    // album
+    $row1 = $db->tampilAlbum(0,6);
+    $row2 = $db->tampilAlbum(7,11);
+    // end album
+    // genre
+    $genre1 = $db->tampilGenre(0,5);
+    // end genre
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +65,35 @@
                 <div class="album-rule">
                     <div class="album-title">Only for u</div>
                     <div class="album-wrapper">
-                        <?php foreach($row as $r) : ?>
+                        <?php foreach($row1 as $r) : ?>
+                        <div class="box">
+                            <div class="album">
+                                <img src="upload/<?= $r["gambar_album"]; ?>" alt="">
+                            </div>
+                            <div class="album_desc">
+                                <h4><?= $r["nama_album"]; ?></h4>
+                                <p>-<?= $r["penyanyi"]; ?></p>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+
+                <div class="album-rule">
+                    <div class="album-title">Pick your music genre</div>
+                    <div class="album-wrapper">
+                        <?php foreach($genre1 as $g) : ?>
+                        <div class="box genre">
+                            <h3><?= $g['nama_genre']; ?></h3>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+
+                <div class="album-rule">
+                    <div class="album-title">Discover more</div>
+                    <div class="album-wrapper">
+                        <?php foreach($row2 as $r) : ?>
                         <div class="box">
                             <div class="album">
                                 <img src="upload/<?= $r["gambar_album"]; ?>" alt="">
@@ -105,7 +139,7 @@
                     <div class="add-playlist">
                         <i class="lni lni-layers"></i>
                     </div>
-                </div>
+                </div>                                                                                                                                                               
             </div>
         </footer>
     </section>

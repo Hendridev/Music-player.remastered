@@ -38,6 +38,7 @@ header {
     width: 100%;
     background-color: white;
     border-bottom: 1px solid#a8e063;
+    z-index: 20;
 }
 
 .header {
@@ -122,7 +123,7 @@ section.hero {
 
 .left-display {
     border-right: 1px solid #a8e063;
-    height: 90vh;
+    height: 100%;
     grid-area: left;
 }
 
@@ -138,6 +139,8 @@ section.hero {
     display: flex;
     align-items: center;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .menu:hover {
@@ -150,7 +153,7 @@ section.hero {
 }
 
 .album-rule {
-    padding: 10px;
+    padding: 20px 10px;
     margin: 0 0 10px 0;
 }
 
@@ -170,6 +173,14 @@ section.hero {
     margin: 0 10px;
 }
 
+.genre {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
 .album {
     height: 200px;
     border: 1px solid white;
@@ -183,6 +194,9 @@ section.hero {
     height: 100%;
     object-fit: cover;
     border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 4px 0 rgba( 31, 38, 135, 0.37);
 }
 
 .album_desc {
@@ -199,6 +213,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 20;
 }
 
 .playing-status {
