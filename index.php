@@ -84,7 +84,7 @@
                     <div class="album-wrapper">
                         <?php foreach($genre1 as $g) : ?>
                         <div class="box genre">
-                            <h3><?= $g['nama_genre']; ?></h3>
+                            <h3><?= $g['nama_genre']; ?></h3Q>
                         </div>
                         <?php endforeach; ?>
                     </div>

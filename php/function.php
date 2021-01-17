@@ -29,5 +29,13 @@
             return $result;
         }
 
+        function tampilLagu(){
+            $query= mysqli_query($this->do,"SELECT * FROM music");
+            while($dum = mysqli_fetch_array($query)){
+                $result[] = $dum;
+            }
+            return $result;
+        }
+
     }
 ?>
